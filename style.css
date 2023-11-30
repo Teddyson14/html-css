@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(64, 122, 216);
+    z-index: -1;
+    animation: day 5s linear forwards;
+}
+.word{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.car{
+    top: 50%;
+    position: absolute;
+    animation: ride 5s linear forwards;
+    z-index: 0; 
+}
+.top-car{
+    border-radius: 25px 25px 0 0;
+    width: 100px;
+    height: 70px;
+    background: #a2190a;
+    margin-left: 40px;
+    /* transform: perspective(220px) rotateX(45deg); */
+}
+.bottom-car{
+    width: 200px;
+    height: 60px;
+    background: #a2190a;
+    border-radius: 7px 8px 0 0;
+    /* transform: perspective(120px) rotateX(15deg); */
+}
+.wheel{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: black;
+}
+.wheel_one{
+    top: 30px;
+    left: 15px;
+}
+.wheel_two{
+    bottom: 30px;
+    left: 125px;
+}
+@keyframes ride {
+    0%{
+        left: 0px;
+    }
+    100%{
+        left:1300px;
+    }
+}
+.road{
+    position: absolute;
+    top: 72%;
+    width: 100vw;
+    height: 204px;
+    background-color: green;
+}
+.sun{
+    position: absolute;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    animation: sun 5s linear forwards;
+}
+@keyframes sun{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left:1300px;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+@keyframes day{
+    0%{
+        background-color: rgb(64, 122, 216);
+    }
+    100%{
+        background-color: darkblue;
+    }
+}
